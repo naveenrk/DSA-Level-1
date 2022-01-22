@@ -19,6 +19,6 @@ function recursiveFibonacci(num) {
     return num;
   }
 
-  return recursive(num - 1) + recursive(num - 2);
+  return recursiveFibonacci(num - 1) + recursiveFibonacci(num - 2);
 }
 console.log(recursiveFibonacci(5));
