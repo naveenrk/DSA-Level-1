@@ -1,19 +1,24 @@
 function countDigit(number) {
   console.log(
-    ` Number of digits in ${number} is : ${number.toString().length}`
+    ` countDigit() Number of digits in ${number} is : ${
+      number.toString().length
+    }`
   );
 }
 const number = 93456;
 countDigit(number);
 
-function countDigitByMath(numeric) {
+function countDigitByMath(num) {
   let count = 0;
-  while (numeric % 10 != 0) {
+  while (num != 0) {
+    num = parseInt(num / 10);
     count++;
   }
 
   return count;
 }
 
-const numeric = 1234;
-console.log(countDigitByMath(numeric));
+const num = 1234;
+console.log(
+  `countDigitByMath() Number of digits in ${num} is : ${countDigitByMath(num)}`
+);
