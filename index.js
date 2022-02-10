@@ -1,24 +1,19 @@
-function fibonacci(num) {
-  let a = 0;
-  let b = 1;
-  let series = [a, b];
-  let result = 0;
-  for (let i = 0; i < num; i++) {
-    result = a + b;
-    a = b;
-    b = result;
-    series.push(result);
-  }
-  return series;
+function countDigit(number) {
+  console.log(
+    ` Number of digits in ${number} is : ${number.toString().length}`
+  );
 }
+const number = 93456;
+countDigit(number);
 
-console.log(fibonacci(6));
-
-function recursiveFibonacci(num) {
-  if (num < 2) {
-    return num;
+function countDigitByMath(numeric) {
+  let count = 0;
+  while (numeric % 10 != 0) {
+    count++;
   }
 
-  return recursiveFibonacci(num - 1) + recursiveFibonacci(num - 2);
+  return count;
 }
-console.log(recursiveFibonacci(5));
+
+const numeric = 1234;
+console.log(countDigitByMath(numeric));
