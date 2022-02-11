@@ -17,4 +17,3 @@
  }
  const value = inverseANumber(number);
  console.log(`Inverse of ${number} is : ${value}`);
- 
